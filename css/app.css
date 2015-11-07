@@ -1,5 +1,25 @@
-/* app css stylesheet */
+@font-face {
+	font-family: system;
+	src: url(../font/NanumGothic.ttf) format('truetype');
+}
+
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+	font-family: system;
+}
+
+nav {
+	margin-bottom: 2rem;
+}
+
+.bg_plain {
+	background-color: #E1F5C4;
+}
+
+.section {
+	padding: 1rem;
+	box-shadow: 0px 0px 0.5rem #EDE574;
+}
+.section.rad {
+	background-color: #FFF;
+	border-radius: 1rem;
 }
