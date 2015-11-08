@@ -12,22 +12,24 @@
 	<link rel="stylesheet" href="css/lib/skeleton.css"/>
 	<link rel="stylesheet" href="css/app.css"/>
 </head>
-<body class="bg_plain">
+<body ng-app="App">
 
-	<div class="container" ng-app="App">
-		<header>
-			<h1>Hello, there!</h1>
-		</header>
-		
-		<nav>
-			<a href="#/home">Home</a>
-			<a href="#/reference">참조</a>
-		</nav>
+	<header></header>
+
+	<div class="container">
 	
-		<!--Here go the partials -->
+		<nav class="navbar" navbar>
+			<div class="container">
+				<ul class="list_navbar_menu">
+					<li><a href="#/home">Home</a>
+					<li><a href="#/reference">참조</a>
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- Partials -->
 		<div ng-view></div>
 		
-		<!-- Footer -->
 		<footer>
 		    <p>&copy; edunga1 2015</p>
 		</footer>
