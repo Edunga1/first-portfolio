@@ -5,6 +5,8 @@ angular.module('App', ['ngRoute','App.filters', 'App.services', 'App.directives'
 	config(
 		function($routeProvider) {
 			$routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: GenericViewCtrl});
+			$routeProvider.when('/kpool', {templateUrl: 'partials/kpool.html', controller: GenericViewCtrl});
+			$routeProvider.when('/travelmaker', {templateUrl: 'partials/travelmaker.html', controller: GenericViewCtrl});
 			$routeProvider.when('/reference', {templateUrl: 'partials/reference.html', controller: GenericViewCtrl});
 			$routeProvider.otherwise({redirectTo: '/home'});
 		}
