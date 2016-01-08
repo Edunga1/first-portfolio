@@ -9,20 +9,21 @@ body {
 header {
 	margin-top: 18rem;
 }
-
 nav {
 	margin-bottom: 2rem;
 }
-
 footer {
 	margin-top: 2rem;
+}
+strong {
+	font-weight: bold;
 }
 
 .bgw {
 	background-color: #FFF;
 }
 .bg1 {
-	background-color: #E1F5C4;
+	background-color: #FF4E50;
 }
 .bg2 {
 	background-color: #FC913A;
@@ -81,8 +82,8 @@ footer {
 	height: 6.5rem;
 	width: 100%;
 	background-color: #fff;
-	border-top: 1px solid #E1F5C4;
-	border-bottom: 1px solid #E1F5C4;
+	border-top: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
 }
 .navbar:not(.docked) .container {
 	width: 100%;
@@ -104,16 +105,43 @@ footer {
 	text-decoration: none;
 }
 
+.list_tags {
+	
+}
+.list_tags>li {
+	display: inline-block;
+	margin-right: .5rem;
+	background-color: #FF4E50;
+	padding: .2rem .4rem;
+	border-radius: .4rem;
+	box-shadow: .1rem .1rem .2rem #555;
+	color: #fff;
+	font-size: 1rem;
+}
+
 /* texts */
-.tit_project {
+.tit {
+	font-size: 1.4rem;
 	margin-bottom: .5rem;
 	text-transform: uppercase;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	font-weight: bold;
 	letter-spacing: .2rem;
+}
+
+.b {
+	font-weight: bold;
 }
 
 .desc_project {
 	font-size: 1.3rem;
 	margin-bottom: .5rem;
+}
+
+.section_doc {
+	
+}
+.section_doc .tit {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
 }
