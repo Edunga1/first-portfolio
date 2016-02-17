@@ -10,6 +10,7 @@ angular.module('App', ['ngRoute','App.filters', 'App.services', 'App.directives'
 			$routeProvider.when('/kpool', {templateUrl: 'partials/kpool.html', controller: GenericViewCtrl});
 			$routeProvider.when('/travelmaker', {templateUrl: 'partials/travelmaker.html', controller: GenericViewCtrl});
 			$routeProvider.when('/cctv', {templateUrl: 'partials/cctv.html', controller: GenericViewCtrl});
+			$routeProvider.when('/etc', {templateUrl: 'partials/etc.html', controller: GenericViewCtrl});
 			$routeProvider.otherwise({redirectTo: '/home'});
 		}
 	);

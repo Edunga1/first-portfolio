@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>..</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/math.js"></script>
+	<script src="js/event.js"></script>
+</head>
+<body onload="eventInitialize();canvasInit()">
+	<!-- 변수 조정 DIV -->
+	<div id="wrapAdjust">
+		<!-- 변수조정 input 목록 -->
+		<ul id="adjuster">
+			<form onsubmit="toggleAdjuster();drawLines(); return false">
+			<li>
+				<h3>반경(px)</h3><input id="mRadius" type="number" value="250" min="1" required />
+			</li>
+			<li>
+				<h3>빈도 수</h3><input id="mOften" type="number" value="5" min="1" required />
+			</li>
+			<li>
+				<h3>그리기 속도(ms)</h3><input id="mDelay" type="number" value="50" min="0" required />
+			</li>
+			<li>
+				<h3>회전각</h3><input id="mRotateRadius" type="number" value="15" min="1" max="360" required />
+			</li>
+			<li>
+				<h3>선 색상</h3><input id="mColor1" type="color" value="#6e6e6e" required />
+				<input id="mColor2" type="color" value="#c8c8c8" required />
+				<input id="mColor3" type="color" value="#ffffff" required />
+				랜덤?<input id="mRandomColor" type="checkbox" />
+			</li>
+			<li>
+				<h3>배경 색상</h3><input id="mBgcolor" type="color" value="#000000" required />
+				투명?<input id="mTranspBg" type="checkbox" />
+			</li>
+			<li>
+				<!-- submit 버튼에 onClick 부여시 유효성체크 안함 -->
+				<input id="btnAdjustDone" type="submit" value="Draw!" />
+				<input id="btnClear" type="button" onclick="canvasClear()" value="Clear" />
+				<input id="btnSave" type="button" onclick="canvasSave()" value="Upload" />
+			</li>
+			</form>
+		</ul>
+		<!-- 변수조정 div 토글버튼 -->
+		<div id="btnToggle" onclick="toggleAdjuster()"></div>
+	</div>
+	
+	<!-- 업로드 목록 버튼 -->
+	<div id="curtain"></div>
+	<div id="btnUploadList" onclick="loadUploadImgs()"></div>
+	<!-- 업로드 목록 -->
+	<div id="wrapUploadList">
+		<div id="btnUploadListClose" onclick="hideUploadList()">CLOSE</div>
+		<div id="innerList"></div>
+	</div>
+	
+	<!-- Canvas -->
+	<canvas id="canvas"></canvas>
+</body>
+</html>

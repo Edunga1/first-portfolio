@@ -82,6 +82,13 @@ https://api.instagram.com/v1/tags/####/media/recent?access_token=TOKEN
 			<a href="http://www.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/" target="_blank">플러그인 패턴</a>을
 			공부하면서 다양한 패턴을 공부했다.
 		</p>
+		<strong>캐릭터셋 문제</strong>
+		<p>
+			인스타그램은 모바일 앱이다보니 게시글 내용에 모바일에서 추가된 새로운 문자인 emoji 즉, 이모티콘이 문자로 지원된다.
+			기존의 DB의 캐릭터셋인 utf8이 이모티콘을 지원하지 않아서 Crawler가 DB에 내용을 저장하지 못하고 'incorrect string value' 에러가 발생했다.<br>
+			해결 방법은 확장된 캐릭터셋인 utf8mb4를 이용하는 것이었으나 스키마, 테이블, 컬럼을 하나씩 바꿔봐도 해결되지 않았다.<br>
+			한참을 고생하고 끝내 해결한 결과 my.ini 안에 있는 character-set-server를 utf8에서 utf8mb4로 변경하여 해결했다. 
+		</p>
 		<strong>아쉬운 점</strong>
 		<p>
 			초기 시스템은 왓챠와 같이 데이터를 기반으로 신뢰성 있는 여행지를 추천해 주는 것이었다.<br>
