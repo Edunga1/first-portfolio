@@ -79,6 +79,7 @@ strong {
 
 /* navigation bar */
 .navbar {
+    overflow-y: hidden;
 	height: 6.5rem;
 	width: 100%;
 	background-color: #fff;
